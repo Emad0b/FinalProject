@@ -1,0 +1,2 @@
+"""Frontend dashboard package."""
+

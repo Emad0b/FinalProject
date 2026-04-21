@@ -1,0 +1,15 @@
+[Unit]
+Description=Hyperlocal air quality monitor (PMS5003 + DHT22 + OLED + RGB)
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/FinalProject/raspberry_pi
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/pi/FinalProject/raspberry_pi/.venv/bin/python3 monitor.py
+Restart=on-failure
+RestartSec=15
+
+[Install]
+WantedBy=multi-user.target

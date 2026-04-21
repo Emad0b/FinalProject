@@ -1,0 +1,27 @@
+EcoCity archive processing summary
+Source: ECOCITY_Archive_1273_561_2019-02-20_2025-03-08.csv
+Station ID: 650
+Native resolution: daily (upsampled to 10-minute grid via time interpolation).
+
+Threshold flags (on 10-minute grid):
+  caution (PM2.5 > 25) timesteps: 5446
+  alert (PM2.5 > 50) timesteps: 176
+  spike (PM2.5 > 1.5 × 30-min rolling mean) timesteps: 0
+  two consecutive caution timesteps (10-min cadence): 5411
+
+Exceedance episodes (contiguous PM2.5 > 25):
+  episodes: 35
+  pct episodes lasting >= 10 minutes: 100.00
+  median episode length (minutes): 1170.00
+
+Exceedance episodes (PM2.5 > 50):
+  episodes: 1
+  pct episodes lasting >= 10 minutes: 100.00
+
+Figure saved:
+  C:\Users\emado\PycharmProjects\UbiquitousComputing\FinalProject\output\kaggle_validation.png
+
+Report snippet (~150 words):
+—
+We validated threshold and rolling-baseline logic on the independent EcoCity outdoor archive (ECOCITY_Archive_1273_561_2019-02-20_2025-03-08.csv), station 650, spanning 2020-07-24 to 2025-03-08. The export is daily; we upsampled to a 10-minute grid with time interpolation so the same rolling (3×10 min ≈ 30 minutes), spike (1.5× baseline), and WHO-style flags (caution >25, alert >50 µg/m³) align with the planned indoor monitor cadence. On this grid, 100.0% of PM2.5 episodes above 25 µg/m³ lasted at least 10 minutes (episode-based); after daily→10 min upsampling, episodes are elongated versus raw sub-hourly sensors, so this mainly shows that exceedances are not single isolated points. Spike flags (1.5× rolling mean) were 0 on this smoothed series—expect more hits on real high-cadence Pi data. A sample week (2024-03-01–2024-03-07 23:50:00) is in kaggle_validation.png with threshold lines. Outdoor Ukrainian data are not Middle Eastern indoor conditions; recalibrate on Pi logs.
+—

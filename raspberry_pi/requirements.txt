@@ -1,0 +1,10 @@
+# Raspberry Pi OS — Python 3.11+
+# Enable I2C and serial UART; install system fonts for OLED (optional): fonts-dejavu-core
+
+gpiozero>=2.0
+luma.oled>=3.12
+Pillow>=10.0
+pyserial>=3.5
+adafruit-blinka>=8.20
+adafruit-circuitpython-dht>=4.0
+adafruit-circuitpython-pm25>=2.0
