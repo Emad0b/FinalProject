@@ -1,6 +1,6 @@
 # Hyperlocal Air Monitor
 
-An IoT air-monitoring project combining Raspberry Pi sensor readings, a FastAPI backend, a Streamlit dashboard, and offline air-quality data analysis. The repository is named `FinalProject`; its application is the Hyperlocal Air Monitor.
+An IoT air-monitoring project combining Raspberry Pi sensor readings, a FastAPI backend, a Streamlit dashboard, and offline air-quality data analysis. The repository is named `hyperlocal-air-monitor-platform`; its application is the Hyperlocal Air Monitor.
 
 ## Components
 
